@@ -44,6 +44,14 @@ while True:
                                             seguir = False
                             else:
                                 pass
+                    if len(ventas) == 0:
+                        for h in clientes:
+                                    for k in h:
+                                        if k == nombre:
+                                            clientes.remove(h)
+                                            print("Se ha eliminado el cliente")
+                                            print(clientes)
+                                            seguir = False
             case 3:
                 cliente_factura = input("Introduzca el cliente a añadir la factura: ")
                 dia = input("Introduzca el dia del mes de la factura: ")
@@ -80,7 +88,8 @@ while True:
                 if len(client)>0:
                     print(f"Factura empleado {client[0]}: total de dias facturados: {client[1]}, monto total facturado {client[2]}")
             case 5:
-                print(clientes)
+                for i in range(len(clientes)):
+                        print(clientes[i][0])
             case 6:
                 break
 #furula 🤙
